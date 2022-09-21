@@ -1,0 +1,159 @@
+.cart{
+    display: flex;
+}
+
+.cartBody {
+    text-align: center;
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 20px;
+}
+
+.cartHeader {
+    font-family: 'Emblema One';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 36px;
+}
+
+.container {
+    background-color: white;
+    display: flex;
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    box-shadow: 0px 6px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    margin-top: 2%;
+}
+
+.containerItems {
+    margin-left: 10%;
+    margin-top: 10px;
+}
+
+.itemName {
+    font-family: 'Englebert';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+}
+
+.itemAvailability {
+    font-family: 'Elephant';
+    font-style: italic;
+    font-weight: 400;
+    font-size: 20px;
+    color: #53E08B;
+    margin-top: -20%;
+    margin-left: -55%;
+}
+
+.itemPrice {
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 34px;
+    margin-left: -50%;
+}
+
+#containerButtons {
+    display: flex;
+    margin-top: 12%;
+    margin-left: 28%;
+    justify-content: space-between;
+}
+
+#containerButtons button {
+    width: 58.8px;
+    height: 45.18px;
+    font-size: 45px;
+    border: none;
+}
+
+.plusButton {
+    margin-left: 20%;
+    background-color: #FFBD5A;
+}
+
+.minusButton {
+    padding-right: 5%;
+
+}
+
+.count {
+    margin-left: 20%;
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+    margin-top: 15px;
+}
+
+.bottom {
+    width: 80%;
+    margin-left: 19.6%;
+
+}
+
+.bottom button {
+    width: 80%;
+    height: 50px;
+    background: #FFBD5A;
+    border-radius: 10px;
+    font-family: 'Emblema One';
+    font-style: normal;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 29px;
+    margin-left: 10%;
+    border: none;
+}
+
+table {
+    width: 80%;
+    margin-left: 10%;
+}
+
+th {
+    margin-left: -20%;
+}
+
+.line {
+
+    position: absolute;
+    width: 63.8%;
+    height: 0px;
+    opacity: 0.5;
+    border: 1px solid #000000;
+    transform: matrix(1, 0, -0.01, 1, 0, 0);
+    margin-top: 5%;
+}
+
+.bottomContainer {
+    background-color: white;
+    display: flex;
+    width: 80%;
+    margin-left: 10%;
+
+
+}
+
+#totalItems {
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 19.9px;
+
+}
+
+#totalPrices {
+    margin-left: 70%;
+    font-family: 'Elephant';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 20px;
+
+}
