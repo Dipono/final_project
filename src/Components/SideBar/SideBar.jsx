@@ -5,10 +5,10 @@ import sideCart from '../assets/icons/cart-svgrepo-com.svg';
 import sideProfile from '../assets/icons/user.png';
 import sideSearch from '../assets/icons/search.png';
 import siderestaurant from '../assets/icons/restaurant-svgrepo-com.svg';
-import {useNavigate, NavLink } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function SideBar() {
-    const navigate = useNavigate()
+
     return (
         <div className="side-bar">
             <div className="side-bar-profile">
@@ -21,10 +21,12 @@ function SideBar() {
                 </div>
             </div>
 
-            <div className='side-bar-content' onClick={() => navigate('/')}>
+            <div className='side-bar-content'>
                 <div className="side-bar-form-group">
                     <div className="side-bar-icon">
-                        <img src={sideBar} alt="sideBar" />
+                        <NavLink to="/" className='navlink'>
+                            <img src={sideBar} alt="sideBar" />
+                        </NavLink>
                     </div>
                     <div className="side-bar-label">
                         <NavLink to="/" className='navlink'><label>Home</label></NavLink>
@@ -40,21 +42,25 @@ function SideBar() {
                     </div>
                 </div>
 
-                <div className="side-bar-form-group" onClick={() => navigate('/cart')}>
+                <div className="side-bar-form-group">
                     <div className="side-bar-icon">
-                        <img src={sideCart} alt="sideBar" />
+                        <NavLink to="/cart" className='navlink'>
+                            <img src={sideCart} alt="sideBar" />
+                        </NavLink>
                     </div>
                     <div className="side-bar-label" >
-                        <label>Cart</label>
+                        <NavLink to="/cart" className='navlink'><label>Cart</label></NavLink>
                     </div>
                 </div>
 
-                <div className="side-bar-form-group" onClick={() => navigate('/profile')}>
+                <div className="side-bar-form-group">
                     <div className="side-bar-icon">
-                        <img src={sideProfile} alt="sideBar" />
+                        <NavLink to="/profile" className='navlink'>
+                            <img src={sideProfile} alt="sideBar" />
+                        </NavLink>
                     </div>
                     <div className="side-bar-label">
-                        <label>Profile</label>
+                        <NavLink to="/profile" className='navlink'><label>Profile</label></NavLink>
                     </div>
                 </div>
 

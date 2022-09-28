@@ -64,6 +64,7 @@
     font-family: Elephant;
     width: 202px;
     height: 46px;
+   
 }
 
 .sign-out{
@@ -75,8 +76,24 @@
     font-size: 24px;
     font-weight: 500;
     
+    
 }
+@media (max-width:650px) {
 
+    .sign-out{
+    
+        background-color: rgba(235, 0, 0, 1);
+        height: 46px;
+        border-radius: 10px;
+        border: none;
+        font-size: 18px;
+        font-weight: 500;
+        
+        width: 90px;
+    }
+
+    
+}
 
 
 @media only screen and (max-width: 600px) {
