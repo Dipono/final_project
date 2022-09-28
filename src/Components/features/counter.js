@@ -2,7 +2,8 @@ import { createSlice } from '@reduxjs/toolkit';
 
 const initialStateValue = {
     coin:0,
-    total:0
+    total:0,
+    itemNumber:0
 }
 
 export const counterSlice = createSlice({
@@ -20,6 +21,9 @@ export const counterSlice = createSlice({
         },
         amountDecrement: (state, action)=>{
             state.total -= action.payload
+        },
+        itemNumberIncrease: (state, action)=>{
+            
         }
     }
 });

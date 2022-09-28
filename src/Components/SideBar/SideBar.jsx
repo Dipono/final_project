@@ -5,7 +5,7 @@ import sideCart from '../assets/icons/cart-svgrepo-com.svg';
 import sideProfile from '../assets/icons/user.png';
 import sideSearch from '../assets/icons/search.png';
 import siderestaurant from '../assets/icons/restaurant-svgrepo-com.svg';
-import {NavLink} from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 
 function SideBar() {
 
@@ -27,7 +27,7 @@ function SideBar() {
                         <img src={sideBar} alt="sideBar" />
                     </div>
                     <div className="side-bar-label">
-                        <label>Home</label>
+                        <NavLink to="/" className='navlink'><label>Home</label></NavLink>
                     </div>
                 </div>
 
@@ -45,8 +45,7 @@ function SideBar() {
                         <img src={sideCart} alt="sideBar" />
                     </div>
                     <div className="side-bar-label" >
-                        <NavLink to="/cart"><label>Cart</label></NavLink>
-                        
+                        <NavLink to="/cart" className='navlink'><label>Cart</label></NavLink>
                     </div>
                 </div>
 
@@ -55,7 +54,7 @@ function SideBar() {
                         <img src={sideProfile} alt="sideBar" />
                     </div>
                     <div className="side-bar-label">
-                        <label>Profile</label>
+                        <NavLink to="/profile" className='navlink'><label>Profile</label></NavLink>
                     </div>
                 </div>
 

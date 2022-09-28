@@ -1,0 +1,49 @@
+.homePage{
+    /*display: flex;
+    width: 70vw;*/
+}
+
+.image{
+    align-items: center;
+    width: 70vw;
+    height: 50vh;
+}
+
+.container{
+    margin: 2vh;
+    text-align: center;
+    width: 70vw;
+}
+
+.btnShopping{
+    font-family: 'Emblema One';
+    background-color: #FFBD5A;
+    height: 5vh;
+    width: 10vw;
+    border-radius: 20px;
+}
+
+.order-card{
+    background-color: rgba(184, 184, 184, 0.377);
+    margin: 15px;
+    border-radius: 20px;
+}
+
+.refNo{
+    margin: 0 20px;
+}
+
+.orderDate{
+    margin: 0 20px;
+}
+
+
+th{
+    margin: 0 20px;
+    padding: 0 100px;
+
+}
+
+td{
+    text-align: center;
+}

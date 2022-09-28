@@ -4,26 +4,44 @@ import filter from '../assets/icons/edit.png'
 import starRating from '../assets/icons/star.png'
 import cart from '../assets/icons/cart-svgrepo-com.svg'
 import { useSelector, useDispatch } from 'react-redux';
-import { displayProduct,addedToCart } from '../features/products';
-import {increment,decrement,amountDecrement,amountIncrement} from '../features/counter'
+import { displayProduct, addedToCart } from '../features/products';
+import { increment, decrement, amountDecrement, amountIncrement } from '../features/counter'
 
 import producData from '../data/productData'
 import { useEffect, useState } from 'react'
 function Home() {
 
     const product = useSelector((state) => state.product.products);
-	const cartItem = useSelector((state) => state.product.cartItems);
-	const dispatch = useDispatch()
-    useEffect(()=>{
+    const [isSearch, setIsSearch] = useState(false);
+    const [SearchedItem, setSearchedItem] = useState([])
+    const dispatch = useDispatch()
+    useEffect(() => {
         dispatch(displayProduct(producData))
-        console.log(cartItem)
     })
 
-    function add_to_cart(data){
-		dispatch(increment())
-		dispatch(amountIncrement(data.price))
-		dispatch(addedToCart(data));
-	}
+    function add_to_cart(data) {
+        dispatch(increment())
+        dispatch(amountIncrement(data.price))
+        dispatch(addedToCart(data));
+        console.log(data)
+    }
+
+    function categorySearch(word) {
+        var searchWord = word.target.value;
+
+        var filterProduct = product.filter((value) => {
+            return value.category.toLowerCase().includes(searchWord.toLowerCase());
+        })
+
+        console.log(filterProduct)
+        setSearchedItem(filterProduct)
+
+    }
+
+    function selectedItem(item) {
+        console.log(item)
+    }
+
 
     return (
         <div className='homePage'>
@@ -32,7 +50,17 @@ function Home() {
                 <div style={{ textAlign: 'center' }}>
                     <h1 style={{ fontFamily: 'Emblema One', fontSize: '36px' }}>BIRIBIRI</h1>
                     <div className='home-search'>
-                        <input type="text" placeholder='search product' style={{ textIndent: '15px', fontSize: '20px', width: '50vw', height: '48px', borderRadius: '10px' }} />
+                        <div className='search-product'>
+                            <input type="text" onChange={(event) => categorySearch(event)} placeholder='search product' style={{ textIndent: '15px', fontSize: '20px', width: '50vw', height: '48px', borderRadius: '10px' }} />
+                            <div className='foundItem' style={{ width: '50vw' }}>
+                                {SearchedItem.map((searched, xid) => (
+                                    <div className='searchResults' key={xid} onClick={() => selectedItem(searched)}>
+                                        <p >{searched.name}</p>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+
                         <div className='home-filter'>
                             <img src={filter} alt="filter" />
                         </div>
@@ -41,17 +69,17 @@ function Home() {
 
                 <div className='home-content' style={{ textAlign: 'center' }}>
                     <div className='home-categories' style={{ display: 'flex', justifyContent: 'center' }}>
-                        <div style={{ backgroundColor: 'rgba(255, 255, 255, 1)' }} className='home-cat-item'>
-                            <label style={{ fontSize: '40px', fontFamily: 'Engagement' }}>Trending</label>
+                        <div className='home-cat-item'>
+                            <button className='home-cat-button' style={{ fontSize: '20px', fontFamily: 'Engagement' }}>Trending</button>
                         </div>
-                        <div style={{ backgroundColor: 'rgba(255, 255, 255, 1)' }} className='home-cat-item'>
-                            <label style={{ fontSize: '40px', fontFamily: 'Engagement' }}>Women</label>
+                        <div className='home-cat-item'>
+                            <button className='home-cat-button' style={{ fontSize: '20px', fontFamily: 'Engagement' }}>Women</button>
                         </div>
-                        <div style={{ backgroundColor: 'rgba(255, 255, 255, 1)' }} className='home-cat-item'>
-                            <label style={{ fontSize: '40px', fontFamily: 'Engagement' }}>Men</label>
+                        <div className='home-cat-item'>
+                            <button className='home-cat-button' style={{ fontSize: '20px', fontFamily: 'Engagement' }}>Men</button>
                         </div>
-                        <div style={{ backgroundColor: 'rgba(255, 255, 255, 1)' }} className='home-cat-item'>
-                            <label style={{ fontSize: '40px', fontFamily: 'Engagement' }}>Kids</label>
+                        <div className='home-cat-item'>
+                            <button className='home-cat-button' style={{ fontSize: '20px', fontFamily: 'Engagement' }}>Kids</button>
                         </div>
                     </div>
 
@@ -70,11 +98,11 @@ function Home() {
                                     <div style={{ width: '60%', textAlign: 'left', margin: '8px' }}>
                                         <label><b>R {product.price}</b></label>
                                     </div>
-                                    <div style={{ width: '86.33px', height: '36.66px', display: 'flex', textAlign: 'right', backgroundColor: '#FFBD5A', borderRadius: '15px' }} onClick={()=>{add_to_cart(product)}}>
+                                    <div className='add-to-cart' style={{ width: '86.33px', height: '36.66px', display: 'flex', textAlign: 'right', backgroundColor: '#FFBD5A', borderRadius: '15px' }} onClick={() => { add_to_cart(product) }}>
                                         <img src={cart} alt="cart" height='20px' width='20px' style={{ margin: '8px' }} />
                                         <label style={{ margin: '8px' }}><b>Add</b></label>
                                     </div>
-                                </div>
+                                </div> 
                             </div>
                         ))}
                     </div>

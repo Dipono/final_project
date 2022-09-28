@@ -1,0 +1,22 @@
+.homePage{
+    display: flex;
+    
+}
+
+.image{
+    align-items: center;
+    width: 70vw;
+    height: 50vh;
+}
+.notificationContainer{
+    margin: 2vh;
+    text-align: center;
+    width: 70vw;
+}
+.btnShopping{
+    font-family: 'Emblema One';
+    background-color: #FFBD5A;
+    height: 5vh;
+    width: 10vw;
+    border-radius: 20px;
+}

@@ -4,8 +4,13 @@
 }
 
 .side-bar {
-    margin: 50px;
+    width: 20vw;
+    margin: 5vw;
     font-family: Emblema One;
+     position: sticky;
+     top: 0;
+     height: 98vh;
+   
 }
 
 .side-bar-profile {
@@ -82,6 +87,7 @@
     .side-bar-profile {
         flex-direction: column;
     }
+  
 }
 
 @media only screen and (max-width: 500px) {

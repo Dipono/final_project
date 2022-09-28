@@ -11,56 +11,92 @@
     margin-top: 5px;
     background-color: rgba(255, 189, 90, 1);
     height: 48px;
-    width: 108.14px;
+    width: 5vw;
     border-radius: 10px;
 }
 .home-filter img{
     height: 50px;
-    width: 50px;
+    width: 4vw;
 }
 
 .home-content{
     margin: 50px;
 }
 
-.home-cat-item{
+/* .home-cat-item{
     margin: 0 5px;
-    height: 56px;
-    width: 171.22px;
+    height: auto;
+    width: 100px;
     border-radius: 15px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
+} */
+
+.home-cat-button{
+    margin: 0 5px;
+    height: auto;
+    width: 100px;
+    border-radius: 15px;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 1);
 }
 
-.home-cat-item:hover{
+.home-cat-button:hover{
     cursor: pointer;
     background-color: #FFBD5A;
     color: rgb(151, 148, 148);
 }
 
-.home-cat-item:active{
-    background-color: blue;
+.home-cat-button:focus{
+    background-color: #FFBD5A;
+    color: rgb(151, 148, 148);
 }
 
+.foundItem{
+    height: 100px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    overflow: hidden;
+    overflow-y: auto;
+    text-align: left;
+    position: absolute;
+}
 
-.home-cat-item label{
-    margin-top: 50px;
+.foundItem:empty{
+    height: 0px;
+}
+
+.searchResults{
+    justify-content: left;
+    background-color: #fff;
+    color: black;
+    align-items: center;
+}
+
+.searchResults p:hover{
+    background-color: lightgray;
+    cursor: pointer;
 }
 
 .home-products{
     flex-wrap: wrap;
 }
 
-@media only screen and (max-width: 1090px) {
-    .home-search{
-        flex-direction: column;
-    }
+.add-to-cart:hover{
+    cursor: pointer;
+}
 
+.add-to-cart:active{
+    cursor: default;
+}
+
+@media only screen and (max-width: 1090px) {   
     .homeHeader{
         text-align: left;
         margin-right:'50vw'
     }
-
     .home-categories{
-        flex-direction: column;
+        flex-wrap: wrap;
     }
 
     .home-cat-item{

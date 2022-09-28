@@ -1,13 +1,10 @@
-.cart{
+.cart {
     display: flex;
 }
 
 .cartBody {
-    text-align: center;
-    width: 80%;
     display: flex;
     flex-direction: column;
-    padding-bottom: 20px;
 }
 
 .cartHeader {
@@ -15,76 +12,81 @@
     font-style: normal;
     font-weight: bold;
     font-size: 36px;
+    text-align: center;
+
 }
 
 .container {
-    background-color: white;
-    display: flex;
-    text-align: center;
-    width: 80%;
-    margin-left: 10%;
-    box-shadow: 0px 6px 4px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 20px;
     margin-top: 2%;
-}
-
-.containerItems {
-    margin-left: 10%;
-    margin-top: 10px;
+    width: 100%;
+    margin: 2vh;
+    height: 300px;
+    overflow: hidden;
+    overflow-y: auto;
+    text-align: left;
 }
 
 .itemName {
     font-family: 'Englebert';
     font-style: normal;
     font-weight: 400;
-    font-size: 36px;
+    font-size: 2vw;
 }
+/* 
+@media(max-width:650px) {
+
+    .itemName {
+        font-family: 'Englebert';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 15px;
+    }
+} */
 
 .itemAvailability {
     font-family: 'Elephant';
     font-style: italic;
     font-weight: 400;
-    font-size: 20px;
+    font-size: 1.5vw;
     color: #53E08B;
-    margin-top: -20%;
-    margin-left: -55%;
+
 }
 
 .itemPrice {
     font-family: 'Elephant';
     font-style: normal;
     font-weight: bold;
-    font-size: 28px;
-    line-height: 34px;
-    margin-left: -50%;
+    font-size: 2vw;
+    margin-top: 10px;
 }
 
 #containerButtons {
     display: flex;
-    margin-top: 12%;
-    margin-left: 28%;
-    justify-content: space-between;
+    margin-top: 40px;
 }
 
 #containerButtons button {
-    width: 58.8px;
-    height: 45.18px;
-    font-size: 45px;
+    width: 38.8px;
+    height: 35.18px;
+    font-size: 35px;
     border: none;
 }
 
+.xcount {
+    margin: 5px 15px;
+}
+
 .plusButton {
-    margin-left: 20%;
     background-color: #FFBD5A;
 }
 
+/* 
 .minusButton {
-    padding-right: 5%;
+    padding-right: 5px;
 
-}
+} */
 
 .count {
-    margin-left: 20%;
     font-family: 'Elephant';
     font-style: normal;
     font-weight: 400;
@@ -93,8 +95,7 @@
 }
 
 .bottom {
-    width: 80%;
-    margin-left: 19.6%;
+    /*  margin-left: 19.6%; */
 
 }
 
@@ -112,14 +113,6 @@
     border: none;
 }
 
-table {
-    width: 80%;
-    margin-left: 10%;
-}
-
-th {
-    margin-left: -20%;
-}
 
 .line {
 
@@ -135,9 +128,7 @@ th {
 .bottomContainer {
     background-color: white;
     display: flex;
-    width: 80%;
-    margin-left: 10%;
-
+    height: 100px;
 
 }
 
@@ -155,5 +146,46 @@ th {
     font-style: normal;
     font-weight: 400;
     font-size: 20px;
+}
 
+/*class 'cart-product-item' is used for wrapping items*/
+.cart-product-item {
+    background-color: white;
+    display: flex;
+    margin-top: 25px;
+    box-shadow: 0px 6px 4px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 20px;
+    height: 100px;
+    margin: 15px;
+    min-height: 10vh;
+}
+
+.itemImage {
+    width: 20%;
+    margin-left: 20px;
+
+}
+
+.containerItems img {
+    height: 80%;
+    width: 70%;
+    margin-left: 12px;
+    margin-top: 10px;
+}
+
+.itemData {
+    width: 40%;
+    margin-left: 60px;
+
+}
+
+.increaseDecrease {
+    width: 30%;
+    margin-left: 25px;
+}
+
+.cancelCart {
+    width: 10%;
+    font-weight: bold;
+    font-size: 24px;
 }
