@@ -5,10 +5,10 @@ import sideCart from '../assets/icons/cart-svgrepo-com.svg';
 import sideProfile from '../assets/icons/user.png';
 import sideSearch from '../assets/icons/search.png';
 import siderestaurant from '../assets/icons/restaurant-svgrepo-com.svg';
-import { NavLink } from 'react-router-dom'
+import {useNavigate, NavLink } from 'react-router-dom'
 
 function SideBar() {
-
+    const navigate = useNavigate()
     return (
         <div className="side-bar">
             <div className="side-bar-profile">
@@ -21,7 +21,7 @@ function SideBar() {
                 </div>
             </div>
 
-            <div className='side-bar-content'>
+            <div className='side-bar-content' onClick={() => navigate('/')}>
                 <div className="side-bar-form-group">
                     <div className="side-bar-icon">
                         <img src={sideBar} alt="sideBar" />
@@ -40,21 +40,21 @@ function SideBar() {
                     </div>
                 </div>
 
-                <div className="side-bar-form-group">
+                <div className="side-bar-form-group" onClick={() => navigate('/cart')}>
                     <div className="side-bar-icon">
                         <img src={sideCart} alt="sideBar" />
                     </div>
                     <div className="side-bar-label" >
-                        <NavLink to="/cart" className='navlink'><label>Cart</label></NavLink>
+                        <label>Cart</label>
                     </div>
                 </div>
 
-                <div className="side-bar-form-group">
+                <div className="side-bar-form-group" onClick={() => navigate('/profile')}>
                     <div className="side-bar-icon">
                         <img src={sideProfile} alt="sideBar" />
                     </div>
                     <div className="side-bar-label">
-                        <NavLink to="/profile" className='navlink'><label>Profile</label></NavLink>
+                        <label>Profile</label>
                     </div>
                 </div>
 
