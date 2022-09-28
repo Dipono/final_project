@@ -19,8 +19,6 @@ function App() {
           <Route exact path='/profile' element={<Profile />} />
           <Route exact path='/order' element={<Order />} />
           <Route exact path='/notification' element={<Notification />} />
-
-
         </Routes>
       </Router>
     </main>

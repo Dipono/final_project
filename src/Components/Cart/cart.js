@@ -2,16 +2,15 @@
 import './cart.css';
 import SideBar from '../SideBar/SideBar'
 import { useSelector, useDispatch } from 'react-redux';
-import { displayProduct, removeToCart } from '../features/products';
-import { increment, decrement, amountDecrement, amountIncrement } from '../features/counter'
-import img1 from './images/images.jpg'
-import { useState } from 'react';
+import { /* displayProduct */ removeToCart } from '../features/products';
+//import { increment, decrement, amountDecrement, amountIncrement } from '../features/counter'
+//import { useState } from 'react';
 function Cart() {
   // come from the redux
   const cartItem = useSelector((state) => state.product.cartItems);
   const dispatch = useDispatch();
-  let [count, setCount] = useState([])
-  let [total, setTotal] = useState(0)
+  // let [count, setCount] = useState([])
+  // let [total, setTotal] = useState(0)
 
   function decreaseItemNumber(item) {
     console.log(item)
@@ -71,7 +70,6 @@ function Cart() {
     <h4>Delivery</h4>
     <h4>Total</h4>
   </div>
-  <h1 className='line'></h1>
   <div className='bottomItems' id='totalPrices'>
     <h4>R 365</h4>
     <h4>R 567</h4>

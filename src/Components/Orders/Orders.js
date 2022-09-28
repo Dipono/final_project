@@ -11,7 +11,7 @@ import { useEffect, useState } from 'react'
 function Orders() {
     const navigate = useNavigate()
 
-    const [OrderAvailable, setOrderAvailable] = useState(false)
+    const [/* OrderAvailable, */ setOrderAvailable] = useState(false)
     const ordered = [
         {
             refNo: 1234567895, quantity: 2, orderDate: '27 Sep 2022', items: [

@@ -5,14 +5,14 @@ import starRating from '../assets/icons/star.png'
 import cart from '../assets/icons/cart-svgrepo-com.svg'
 import { useSelector, useDispatch } from 'react-redux';
 import { displayProduct, addedToCart } from '../features/products';
-import { increment, decrement, amountDecrement, amountIncrement } from '../features/counter'
+import { increment, /* decrement, amountDecrement,  */amountIncrement } from '../features/counter'
 
 import producData from '../data/productData'
 import { useEffect, useState } from 'react'
 function Home() {
 
     const product = useSelector((state) => state.product.products);
-    const [isSearch, setIsSearch] = useState(false);
+    //const [isSearch, setIsSearch] = useState(false);
     const [SearchedItem, setSearchedItem] = useState([])
     const dispatch = useDispatch()
     useEffect(() => {
@@ -87,7 +87,7 @@ function Home() {
                         {product.map((product, xid) => (
                             <div key={xid} style={{ paddingTop: '20px', width: '182.39px', minHeight: '200px', borderRadius: '12px', background: 'white', margin: '10px' }}>
                                 <div>
-                                    <img src={product.image} width='131.32' height='145.51' alt='Product Image' />
+                                    <img src={product.image} width='131.32' height='145.51' alt='ProductImage' />
                                 </div>
                                 <div><label>{product.name}</label></div>
                                 <div style={{ textAlign: 'left', margin: '8px', display: 'flex' }}>
